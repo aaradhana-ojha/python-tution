@@ -1,0 +1,17 @@
+# Function example
+def greet(name):
+    print("Hello,", name)
+
+# Method example
+class MyClass:
+    def greet(self, name):
+        print("Hello,", name)
+
+# Using the function
+greet("Alice")
+
+# Creating an instance of MyClass
+obj = MyClass()
+
+# Calling the method on the object
+obj.greet("Bob")
