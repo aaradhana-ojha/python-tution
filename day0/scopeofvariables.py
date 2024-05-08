@@ -4,6 +4,7 @@
 # scope (accessible only within a specific block of code).
 
 x = 10  # Global variable
+print(x)
 
 def foo():
     y = 20  # Local variable

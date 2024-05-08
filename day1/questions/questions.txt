@@ -1,0 +1,25 @@
+1. Write a Python program to calculate the perimeter of a rectangle. 
+Hint
+Ask the user to input the length and width of the rectangle as 
+floating-point numbers. Then, compute and display the perimeter of the rectangle.
+
+
+2.. Develop a Python program that computes the volume of a rectangular prism. 
+Hint
+Ask the user to input the length, width, and height of the rectangular prism 
+as floating-point numbers. Calculate and print the volume of the prism.
+
+3. Create a Python program to determine the area of a circle. 
+Hint
+Prompt the user to input the radius of the circle as a 
+floating-point number. Then, compute and display the area of the circle.
+
+4. wap to calculate a simple interest.
+
+5. Write a Python program that demonstrates the concept of mutable and immutable 
+objects. Define an integer variable x as an immutable object and a list variable 
+y as a mutable object. Ask the user to enter either 'i' for immutable or 'm' for 
+mutable. If the user chooses 'i', modify x by adding 5 to it; if 'm' is chosen, 
+append the value 4 to list y. Print the updated values of x or y accordingly. 
+Ensure to handle invalid inputs as well.
+

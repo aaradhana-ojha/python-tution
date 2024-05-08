@@ -1,5 +1,5 @@
 # Function example
-def greet(name):
+def max(name):
     print("Hello,", name)
 
 # Method example
