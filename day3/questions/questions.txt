@@ -1,0 +1,22 @@
+for loop
+
+1. wap to print table of number ask number from user  
+use for and range and print till 10 in table
+
+2. wap to print cube of number from 10 to 18.
+
+3. Write a Python program that asks the user 
+to enter a number and then prints the sum of numbers 
+from 1 to that number.
+
+
+while loop
+
+4. wap to find factorial of input number use only while loop.
+
+5. Write a Python program that prompts the user to enter a 
+positive integer and then calculates and prints the sum of 
+all even numbers from 2 to that integer (inclusive), using 
+only a while loop. Make sure to handle the case where the user 
+enters a non-positive integer by prompting them again until they 
+enter a valid positive integer.
