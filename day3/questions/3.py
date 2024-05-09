@@ -2,12 +2,12 @@
 num = int(input("Enter a number: "))
 
 # Initialize a variable to store the sum of numbers
-total_sum = 0
+total_sum = 0 
 
 # Loop through numbers from 1 to the entered number inclusive
-for i in range(1, num + 1):
+for i in range(1, num + 1): 
     # Add the current number (i) to the sum
-    total_sum += i
+    total_sum =total_sum + i
 
 # Print the sum of numbers from 1 to the entered number
 print("The sum of numbers from 1 to", num, "is:", total_sum)

@@ -1,13 +1,18 @@
 for loop
 
 1. wap to print table of number ask number from user  
-use for and range and print till 10 in table
+use for and range and print till 10 in table.
 
 2. wap to print cube of number from 10 to 18.
 
 3. Write a Python program that asks the user 
 to enter a number and then prints the sum of numbers 
 from 1 to that number.
+
+3.a Write a Python program that asks the user to enter 
+a number n and then calculates and prints the factorial 
+of that number (n!). The factorial of a non-negative integer 
+n is the product of all positive integers less than or equal to n.
 
 
 while loop

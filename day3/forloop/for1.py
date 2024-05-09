@@ -1,3 +1,3 @@
-fruits = ["apple", "banana", "cherry"]
-for fruit in fruits:
+A = ["apple", "banana", "cherry"]
+for fruit in A:
     print(fruit)
