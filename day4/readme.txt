@@ -31,3 +31,24 @@ old_tuple: The original tuple from which elements will be sliced.
     it defaults to the end of the tuple (length of the tuple).
     step: Optional. The step size for slicing. If omitted, it defaults to 1, 
     meaning every element in the specified range is included.
+
+
+Dictionary:
+
+A dictionary in Python is a data structure that stores key-value pairs. It's similar 
+to a real-world dictionary where you look up a word (the key) to find its definition (the value).
+Syntax:
+            # Creating an empty dictionary
+        my_dict = {}
+
+        # Creating a dictionary with initial values
+        my_dict = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3'}
+Iterating through dictionary:
+    We can iterate through a dictionary using loops like for loops.
+
+
+Sorting
+Bubble sort: https://clementmihailescu.github.io/Sorting-Visualizer/
+inserton sort: 
+    
+
