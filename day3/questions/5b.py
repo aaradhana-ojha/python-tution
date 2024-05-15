@@ -1,9 +1,14 @@
-num = int(input("Enter a positive integer: "))
-sum_even = 0
-current_num = 2
+# Get input from the user
+num = int(input("Enter a number: "))
 
-while current_num <= num:
-    sum_even += current_num
-    current_num += 2
+# Initialize variables
+sum_of_numbers = 0
+i = 1
 
-print("The sum of all even numbers from 1 to", num, "is", sum_even)
+# Calculate sum using a while loop
+while i <= num:
+    sum_of_numbers += i
+    i += 1
+
+# Print the sum
+print("The sum of all numbers from 1 to",num, " is:", sum_of_numbers)

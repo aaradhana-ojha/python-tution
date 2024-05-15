@@ -2,7 +2,7 @@
 original_string = "hello"
 
 # Initialize an empty string to store the reversed string
-reversed_string = ""
+reversed_string = "h"
 
 # Iterate through the indices of the original string in reverse order
 for i in range(len(original_string) - 1, -1, -1):
