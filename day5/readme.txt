@@ -1,3 +1,78 @@
+What is a Function?
+A function is like a reusable recipe in Python. 
+Imagine you have a recipe for making a sandwich. 
+Instead of writing down all the steps every time 
+you want to make a sandwich, you write the recipe 
+once and then just call it whenever you need a sandwich.
+
+Why Use Functions?
+Reusability: Write the code once, use it multiple times.
+Organization: Makes your code easier to read and manage.
+Modularity: Breaks down a complex problem into smaller, manageable parts.
+
+
+function in Python that doesn't use parameters. 
+def greet():
+    print("Hello! Welcome to the Python world.")
+
+def is a keyword that tells Python you are defining a function.
+greet is the name of the function.
+The function doesn't have any parameters (no values inside the parentheses).
+Inside the function, it simply prints a greeting message.
+# Calling the function
+greet()
+
+# Output:
+# Hello! Welcome to the Python world.
+
+
+
+
+. Defining a Function using parameters
+
+def make_sandwich(bread, filling):
+    sandwich = bread + " sandwich with " + filling
+    return sandwich
+
+def is a keyword that tells Python you are defining a function.
+make_sandwich is the name of the function.
+bread and filling are inputs to the function, also called parameters.
+return is a keyword that tells the function to give back the result.
+
+sandwich1 = make_sandwich("Whole wheat", "turkey")
+sandwich2 = make_sandwich("Rye", "ham and cheese")
+
+print(sandwich1)  # Output: Whole wheat sandwich with turkey
+print(sandwich2)  # Output: Rye sandwich with ham and cheese
+
+
+When you call make_sandwich("Whole wheat", "turkey"), the function 
+uses the inputs "Whole wheat" and "turkey", and follows the steps you defined, 
+giving you a "Whole wheat sandwich with turkey".
+You can call the same function with different inputs to get different results.
+
+
+Another Example: Adding Two Numbers
+def add_numbers(a, b):
+    sum = a + b
+    return sum
+
+add_numbers is the name of the function.
+a and b are the inputs (parameters).
+The function adds a and b together and returns the result.
+
+result1 = add_numbers(5, 3)
+result2 = add_numbers(10, 15)
+
+print(result1)  # Output: 8
+print(result2)  # Output: 25
+
+
+
+
+
+
+
 Built-in functions in Python are functions 
 that are pre-defined and readily available 
 for use without requiring explicit definition. 
@@ -66,4 +141,4 @@ The random module in Python is a built-in module
 that provides functionalities related to generating 
 random numbers, making random selections, and shuffling 
 sequences. It is part of the Python Standard Library, 
-so you can use it without installing any additional packages.
+so you can use it without installing any additional packages. more inside modules.

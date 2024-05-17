@@ -52,3 +52,40 @@ Bubble sort: https://clementmihailescu.github.io/Sorting-Visualizer/
 inserton sort: 
     
 
+num = 3
+
+# Loop from 1 to 10 to print the multiplication table
+for i in range(1, 11):
+    result = num * i
+    print(num, 'x', i, '=', result)
+
+wap to print first 10 integers and their squres using while loop only
+    # Initialize the counter
+num = 1
+
+# Loop until we reach 10
+while num <= 10:
+    # Calculate the square
+    square = num ** 2
+    # Print the number and its square
+    print("Number:", num, ", Square:", square)
+    # Increment the counter
+    num += 1
+
+
+wap to print loop for series 10, 20, 30 ,40 ..., 100 using simple while and for loop only
+
+using while 
+num = 10  # Start value
+
+# Using a while loop to print the series
+while num <= 100:
+    print(num, end=' ')  # Print the number
+    num += 10  # Increment by 10 for the next number
+
+
+using for
+
+# Using a for loop to print the series
+for num in range(10, 101, 10):
+    print(num, end=' ')  # Print the number
