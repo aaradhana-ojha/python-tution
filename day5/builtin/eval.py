@@ -20,5 +20,5 @@ result2 = eval("x * y - 3")
 print(result2)  # Output: 47
 
 # Complex expressions
-result3 = eval("2**3 + (4 * 2) / 2")
+result3 = eval("2**3 + (4 * 2) / 2") #BODMAS
 print(result3)  # Output: 10.0

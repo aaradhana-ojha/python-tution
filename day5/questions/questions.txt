@@ -1,0 +1,5 @@
+ 1: Finding the Remainder (Modulus)
+ 2: Raising a Number to a Power
+ 3: Finding the Average of Two Numbers
+ 4: Calculating the Absolute Difference
+ 5: Calculating the Square Root of a Number

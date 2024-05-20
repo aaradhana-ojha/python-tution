@@ -5,5 +5,5 @@ def roll_die():
 
 # Roll the die 5 times and print the results
 for i in range(5):
-    result = roll_die()
+    result = result + 1
     print("You rolled a", result)
