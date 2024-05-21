@@ -3,3 +3,13 @@
  3: Finding the Average of Two Numbers
  4: Calculating the Absolute Difference
  5: Calculating the Square Root of a Number
+ 6: wap that fills a list with random numbers
+
+ using main function
+
+ 7:Calculating the Greatest Common Divisor (GCD)
+ 8:Calculating the Factorial of a Number
+ 9:Calculating the Sum of a List of Numbers
+ 10:Calculating the Product of a List of Numbers
+ 11:Finding the Maximum and Minimum of a List
+ 12:Generating a List of Random Numbers
