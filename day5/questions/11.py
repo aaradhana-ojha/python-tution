@@ -1,11 +1,5 @@
-def max_min_list(numbers):
-    return max(numbers), min(numbers)
+def find_max_min(numbers):
+    return max(numbers), min(numbers) # max() and min() are built-in functions that return the maximum and minimum values in a list, respectively
 
-def main():
-    numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
-    max_num, min_num = max_min_list(numbers)
-    print("The maximum of the list is", max_num)
-    print("The minimum of the list is",min_num)
-
-if __name__ == "__main__":
-    main()
+# Example usage
+print(find_max_min([1, 2, 3, 4, 5]))  # Output: (5, 1)

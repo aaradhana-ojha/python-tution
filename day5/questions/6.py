@@ -8,7 +8,7 @@ def fill_list_with_random_numbers(size):
     :return: List of random numbers.
     """
     random_numbers = []  # Initialize an empty list to store the random numbers
-    for _ in range(size):  # Loop 'size' times
+    for i in range(size):  # Loop 'size' times
         random_numbers.append(random.randint(1, 100))  # Generate a random number between 1 and 100 and append it to the list
     return random_numbers  # Return the list of random numbers
 

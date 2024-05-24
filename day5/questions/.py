@@ -5,4 +5,4 @@ def product_of_list(numbers):
     return product
 
 # Example usage
-print(product_of_list([1, 2, 3, 4, 5]))  # Output: 120
+print(product_of_list([1, 2, 3, 4, 5])) 

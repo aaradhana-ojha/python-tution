@@ -7,11 +7,12 @@ Randomness: It allows you to introduce randomness into your programs.
 Simulation: Useful for simulating real-world scenarios, such as dice rolls or card shuffling.
 Security: Important for generating random cryptographic keys.
 Games: Essential for game development, like determining outcomes or AI behavior.'''
-
+'''The randrange function generates an integer between its lower and upper argument 
+where the lower bound is included, but the upper bound is excluded.'''
 import random
 
 # Generate a random integer within a range
-random_num = random.randint(1, 100)
+random_num = random.randint(1, 101)
 print("Random number between 1 and 100:", random_num)
 
 # Generate a random floating-point number within a range

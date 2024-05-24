@@ -1,3 +1,3 @@
-A = ["apple", "banana", "cherry"]
+A = ["apple"]
 for fruit in A:
-    print(fruit)
+    print(fruit[0])

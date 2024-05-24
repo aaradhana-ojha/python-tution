@@ -13,3 +13,5 @@
  10:Calculating the Product of a List of Numbers
  11:Finding the Maximum and Minimum of a List
  12:Generating a List of Random Numbers
+ 13:find the sum of all the even numbers in a given list
+ 14:take two numbers as input and returns a tuple containing their sum and their product

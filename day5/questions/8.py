@@ -4,9 +4,5 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-def main():
-    num = int(input("Enter a number: "))
-    print("The factorial of",num, "is", factorial(num))
-
-if __name__ == "__main__":
-    main()
+# Example usage
+print(factorial(5))  # Output: 120

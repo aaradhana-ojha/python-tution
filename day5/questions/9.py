@@ -1,9 +1,5 @@
-def sum_list(numbers):
+def sum_of_list(numbers):
     return sum(numbers)
 
-def main():
-    numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
-    print("The sum of the list is", sum_list(numbers))
-
-if __name__ == "__main__":
-    main()
+# Example usage
+print(sum_of_list([1, 2, 3, 4, 5]))  # Output: 15

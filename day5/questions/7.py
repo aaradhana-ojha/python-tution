@@ -1,12 +1,7 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
+import math
 
-def main():
-    num1 = int(input("Enter first number: "))
-    num2 = int(input("Enter second number: "))
-    print("The GCD of", num1, " and ", num2, " is",gcd(num1, num2))
+def calculate_gcd(a, b):
+    return math.gcd(a, b)
 
-if __name__ == "__main__":
-    main()
+# Example usage
+print(calculate_gcd(48, 18))  # Output: 6
