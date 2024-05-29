@@ -1,0 +1,11 @@
+1. Finding the Maximum, 
+Minimum, and Mean of 
+Numeric Values Stored in a List
+
+2. Linear search is a simple search 
+algorithm that checks each element 
+of a list sequentially until the 
+desired element (target) is found 
+or the list ends.
+
+3. Counting the Frequency of Elements 

@@ -1,0 +1,35 @@
+1. Write a Python program that iterates through the numbers from 1 to 15. The program should:
+
+Skip printing the number 10 using the continue statement.
+Stop the loop entirely if the number reaches 13 using the break statement.
+Print all other numbers in the range.
+
+2. Write a Python program that iterates through numbers from 1 to 20. The program should:
+
+Skip printing the even numbers using the continue statement.
+Stop the loop entirely if the number is a multiple of 7 using the break statement.
+Print all other numbers in the range.
+
+3.Write a Python program that iterates through numbers from 1 to 30. The program should:
+
+Skip printing the multiples of 3 using the continue statement.
+Stop the loop entirely after printing the number 15 using the break statement.
+Print all other numbers in the range.
+
+4.Write a Python program that iterates through numbers from 10 to 30. The program should:
+
+Skip printing the numbers ending in 5 using the continue statement.
+Stop the loop entirely if the number reaches 25 using the break statement.
+Print all other numbers in the range.
+
+5. Write a Python program that iterates through numbers from 45 to 65. The program should:
+
+Skip printing the numbers greater than 50 using the continue statement.
+Stop the loop entirely if the number reaches 60 using the break statement.
+Print all other numbers in the range.
+
+6. Write a Python program that iterates through numbers from 1 to 50. The program should:
+
+Skip even numbers using the continue statement.
+Stop the loop when a number is a multiple of 7 using the break statement.
+Calculate and print the sum of the odd numbers encountered up to the point where the loop stops.
