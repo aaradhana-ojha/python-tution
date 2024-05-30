@@ -6,7 +6,7 @@ def linear_search(tup, target):
 
 # Example tuple and target
 numbers = (10, 20, 30, 40, 50)
-target = 30
+target = 60
 
 # Performing linear search
 index = linear_search(numbers, target)
