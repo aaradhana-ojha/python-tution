@@ -9,7 +9,7 @@ SHIFT'''
 input_string = "SHIFT"
 
 # Loop to print the rotated versions
-for i in range(len(input_string)):
+for i in range(5):
     rotated_string = input_string[i:] + input_string[:i]
     print(rotated_string)
 

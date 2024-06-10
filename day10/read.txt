@@ -1,0 +1,124 @@
+Introduction to Files
+In Python, files are a way to store data persistently on disk. 
+Files can be of various types, but the most common ones are text 
+files and binary files. Each type of file has different ways of 
+being read from and written to. This guide covers the essential 
+operations for handling these files in Python.
+
+
+Properties of File Objects:
+name: The name of the file.
+
+mode: The mode in which the file was opened ('r' for read, 'w' for write, 'a' for append, etc.).
+
+closed: Indicates whether the file is closed (True if closed, False otherwise).
+
+Methods of File Objects:
+read(size=-1): Reads and returns size bytes from the file. If size is not specified, it reads the entire file.
+
+readline(size=-1): Reads and returns one line from the file. If size is specified, it reads at most size bytes.
+
+readlines(hint=-1): Reads and returns a list of lines from the file. If hint is specified, 
+it reads at most hint bytes.
+
+write(s): Writes the string s to the file.
+
+writelines(lines): Writes a list of lines lines to the file.
+
+close(): Closes the file. After closing, further read or write operations will raise an error.
+
+flush(): Flushes the internal buffer to the file. This is useful when writing to files to ensure that all data is written to disk.
+
+seek(offset, whence=0): Moves the file pointer to the specified offset in the file. The whence argument specifies the reference position (0 for the beginning of the file, 1 for the current position, 2 for the end of the file).
+
+tell(): Returns the current file pointer position.
+
+
+# Open a file
+file = open('example.txt', 'r')
+
+# Properties
+print("Name:", file.name)
+print("Mode:", file.mode)
+print("Closed:", file.closed)
+
+# Methods
+content = file.read()  # Read the entire file
+print("Content:", content)
+
+file.close()  # Close the file
+
+
+Text Files
+Text files store data in plain text format and are human-readable. 
+Common operations include opening, reading, writing, and closing the files.
+
+    Opening and Closing a Text File
+    To open a text file, you use the built-in open() function, which returns 
+    a file object. This file object is used to perform operations such as 
+    reading and writing.
+
+        # Opening a text file
+        file = open('example.txt', 'r')  # 'r' is for read mode
+    After performing operations on the file, it is crucial to close the 
+    file to free up system resources.
+
+        # Closing a text file
+        file.close()
+
+
+
+File Modes
+Different modes can be used with the open() function:
+
+'r': Read (default mode). Opens a file for reading.
+'r+': Read and write. Opens a file for both reading and writing.
+'w': Write. Opens a file for writing (creates a new file or truncates an existing file).
+'w+': Read and write. Opens a file for both reading and writing (creates a new file or truncates an existing file).
+'a': Append. Opens a file for appending (creates a new file if it does not exist).
+'a+': Read and append. Opens a file for both reading and appending (creates a new file if it does not exist).
+
+
+
+
+# Writing to a text file
+with open('example.txt', 'w') as file:
+    file.write("Hello, World!\n")
+    file.writelines(["Line 1\n", "Line 2\n"])
+    
+    '''with Statement:
+The with statement is used to wrap the execution of a block of code. 
+It ensures that resources are properly managed. In this case, 
+it ensures that the file is properly closed after its block of code is executed, even if an exception occurs.
+open('example.txt', 'w'):
+open() is a built-in Python function used to open a file.
+The first argument, 'example.txt', is the name of the file to be opened. 
+If the file does not exist, it will be created.
+The second argument, 'w', specifies the mode in which the file is opened. 
+'w' stands for write mode. In this mode, the file is opened for writing. 
+If the file already exists, its contents are truncated (i.e., erased).
+as file:
+This part of the statement assigns the file object returned by open() 
+to the variable file. You can use this variable to perform operations on the file within the with block.'''
+
+
+file.writelines(["Line 1\n", "Line 2\n"])
+
+file.writelines():
+
+The writelines() method is used to write a list of strings to the file.
+["Line 1\n", "Line 2\n"]:
+
+The list ["Line 1\n", "Line 2\n"] contains the strings to be written to the file. 
+Each string in the list ends with a newline character (\n), ensuring that each 
+line starts on a new line in the file.
+This line of code writes the strings "Line 1\n" and "Line 2\n" to the file, each on a new line.
+
+
+
+difference between file and open with
+Feature	file = open(...) |	with open(...) as ...:
+File opening = Opens a file |	Opens a file with automatic closing
+Closing	Manual = (required) |	Automatic
+Error handling	= Requires manual checks and closing | Handles errors gracefully even during exceptions
+Code clarity	= Less clear (explicit closing needed) |	More readable and avoids potential forgetting to close
