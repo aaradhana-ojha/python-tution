@@ -1,0 +1,117 @@
+Binary Files
+Binary files are files that contain data in binary format. 
+Python provides built-in functions for handling binary files, 
+such as open(), read(), write(), and close(). Additionally, 
+the pickle module allows you to serialize and deserialize Python objects.
+
+Basic Operations on Binary Files
+Opening a Binary File:
+
+rb - Read binary
+rb+ - Read and write binary
+wb - Write binary
+wb+ - Write and read binary
+ab - Append binary
+ab+ - Append and read binary
+
+Using pickle to Serialize and Deserialize Objects:
+
+pickle.dump() - Serializes an object and writes it to a file.
+pickle.load() - Deserializes an object from a file.
+
+
+
+
+Opening Binary Files
+When you open a file in binary mode, you are dealing with binary data, 
+which means you are handling the raw bytes of the file. Here are the different modes for opening a binary file:
+
+rb - Read Binary: Opens the file for reading in binary mode. 
+The file pointer is placed at the beginning of the file.
+rb+ - Read and Write Binary: Opens the file for both reading 
+and writing in binary mode. The file pointer is placed at the beginning of the file.
+wb - Write Binary: Opens the file for writing in binary mode. 
+If the file exists, its contents are cleared; if it does not exist, a new file is created.
+wb+ - Write and Read Binary: Opens the file for both writing 
+and reading in binary mode. If the file exists, its contents 
+are cleared; if it does not exist, a new file is created.
+ab - Append Binary: Opens the file for writing in binary mode. 
+The file pointer is placed at the end of the file. If the file does not exist, it is created.
+ab+ - Append and Read Binary: Opens the file for both writing 
+and reading in binary mode. The file pointer is placed at the end 
+of the file. If the file does not exist, it is created.
+
+
+Advantages
+Space Efficiency: Binary files typically take up less space 
+than text files because they store data in a compact binary 
+format rather than as text characters. This can be particularly 
+\beneficial when dealing with large datasets or complex data structures.
+
+Faster Access: Reading and writing binary files is generally 
+faster than text files because there is no need to convert data 
+to and from text formats. The data is stored in a format that 
+is directly usable by the computer's hardware.
+
+Exact Representation: Binary files can store data with exact precision.
+
+
+
+
+
+
+What is pickle?
+Imagine you have a toy box filled with various toys 
+(like cars, dolls, and blocks). Now, you want to save 
+the exact arrangement of toys in that box so that you can 
+play with them in the same way later. This is where pickle comes in.
+
+In Python, pickle is like a magical tool that helps you 
+save the "toy box" (your data) into a file. Later, you can 
+open that file to get your "toys" back exactly as they were.
+
+
+
+
+Why do we need pickle?
+Save Data: When you work on something and create data 
+(like lists, dictionaries, or even complex objects), 
+you might want to save this data to use it later. pickle helps you save this data to a file.
+
+Share Data: You can use pickle to share your data 
+with others or between different parts of your program.
+
+Efficiency: pickle stores data in a compact, binary format, 
+which takes up less space and is faster to read and write compared to text formats.
+
+How pickle works
+Saving Data (Serialization)
+Serialization is like packing your toys into a box. In Python, 
+pickle does this by converting your data into a format that can be saved to a file.
+
+eg:
+import pickle
+
+# Create some data (like packing your toys)
+data = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+# Open a file to save the data (like opening a toy box)
+with open('data.pkl', 'wb') as file:
+    # Save the data into the file (packing the toys into the box)
+    pickle.dump(data, file)
+
+
+Loading Data (Deserialization)
+Deserialization is like unpacking your toys from the box. 
+In Python, pickle reads the saved data from the file and converts it back into its original form.
+
+Eg:
+import pickle
+
+# Open the file where data is saved (like opening the toy box)
+with open('data.pkl', 'rb') as file:
+    # Load the data from the file (unpacking the toys)
+    data_loaded = pickle.load(file)
+    print(data_loaded)
+
+
