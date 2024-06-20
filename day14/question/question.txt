@@ -1,0 +1,44 @@
+1. Write a program that reads a string from the user containing a date in the form mm/dd/yyyy. 
+It should print the date in the form March 12, 2021.
+
+2. Write a program that accepts a string from the user. Your program should count and display 
+the number of vowels in that string.
+
+3. Write a Python program that accepts a string from the user. Your program should create and 
+display a new string where the first and last characters have been exchanged. For example, 
+if the user enters the string 'HELLO' then the new string would be 'OELLH'.
+
+4. Write a Python program that accepts a string from the user. Your program should create a new 
+string by shifting one position to the left. For example, if the user enters the string 
+'examination 2021' then the new string would be 'xamination 2021e'.
+
+5. Write a program that asks the user to input their name and print its initials. Assuming that 
+the user always types first name, middle name, and last name and does not include any unnecessary 
+spaces. For example, if the user enters Ajay Kumar Garg the program should display A. K. G. Note: 
+Don't use the split() method.
+
+Lists
+6. Write a program that accepts a list from the user and prints the alternate element of the list.
+
+7. Write a program that accepts a list from the user. Your program should reverse the content of the 
+list and display it. Do not use the reverse() method.
+
+8. Write a program that rotates the element of a list so that the element at the first index moves 
+to the second index, the element in the second index moves to the third index, etc., and the element 
+in the last index moves to the first index.
+
+Data File Handling
+9. Write a function in Python to create a text file myfile.txt and save the content in it and define 
+a function to read the content from a text file myfile.txt and display the same on the screen.
+
+10. Write a function in Python to count the number of lines from a text file story.txt which does not 
+start with the alphabet "T". Example: If the file story.txt contains the following lines: A boy is 
+playing there. There is a playground. An aeroplane is in the sky. The sky is pink. Alphabets and 
+numbers are allowed in the password. The function should display the output as 3.
+
+11. Count and display the total number of words in a text file.
+12. Find and display the occurrence of the word "the" in a text file.
+13. Display words which are less than 4 characters from a text file.
+14. Count words ending with the alphabet "e" in a text file.
+15. Display details of students with percentage above 75% in "STUDENT.DAT".
+16. Add one more record to the binary file "employee.dat"
