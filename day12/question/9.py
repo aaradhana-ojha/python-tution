@@ -18,16 +18,24 @@ def add_employee_record(file_name):
     with open(file_name, "ab") as file:
         pickle.dump(record, file)
 
+
 def display_high_salary_employees(file_name):
     with open(file_name, "rb") as file:
-        print("Employees with salary more than 30,000:")
-        while True:
-            try:
-                employee_record = pickle.load(file)
-                if employee_record["salary"] > 30000:
-                    print("Empcode:", employee_record["empcode"], ", Name:", employee_record["name"], ", Salary:", employee_record["salary"])
-            except EOFError:
-                break
+             
+        employee_record = pickle.load(file)
+        print("Empcode:", employee_record["empcode"], ", Name:", employee_record["name"], ", Salary:", employee_record["salary"])
+        
+
+   
+        with open(file_name, "rb") as file:
+            print("Employees with salaries between 25000 and 30000:")
+                     
+            employee_record = pickle.load(file)
+            if 25000 < employee_record["salary"] < 30000:
+                print("Empcode:", employee_record['empcode'], ", Name:", employee_record['name'], ", Salary:", employee_record['salary'])
+              
+   
+      
 
 # File name
 file_name = "employee.dat"
@@ -37,3 +45,5 @@ add_employee_record(file_name)
 
 # Display employees with salary more than 30,000
 display_high_salary_employees(file_name)
+
+

@@ -1,0 +1,7 @@
+Hello, this is the first line.
+How are you doing today?
+This line does not start with H.
+Here is another line that starts with H.
+Hope you find this example useful.
+Not every line starts with H.
+Have a great day!

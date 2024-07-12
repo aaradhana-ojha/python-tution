@@ -1,0 +1,10 @@
+Consider a txt file data.txt consisting information of class 12A and perform the following question
+To count number of lines having ‘and’ & also print frequency of that word.
+To count number of words in each of the line
+To count number of words separately having even and odd length in respect of each of the line
+To count total number of lines started with user specified symbols i.e to be passed as an argument
+Count number of lines that ends with certain symbols
+To print only odd number of lines
+To print only even number of lines
+To count and display the lines which are starting with an article(a, an, the) irrespective of their case
+To count and display number of lines started and ended with same letter
