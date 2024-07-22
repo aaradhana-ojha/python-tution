@@ -1,5 +1,5 @@
 ''' Write a function in Python to count the words "this" and "these" present in a text file 
-"article.txt". [Note that the words "this" and "these" are complete words] '''
+"article.txt". [Note that the words "this" and "these" are complete words'''
 
 def count_this_and_these(filename):
     this_count = 0
