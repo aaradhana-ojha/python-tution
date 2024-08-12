@@ -1,0 +1,169 @@
+TCP (Transmission Control Protocol):
+
+Think of TCP like a mailman who ensures that all the letters in a package reach their destination 
+safely and in the correct order. When you send a message online, TCP breaks it into smaller pieces, 
+sends them, and then puts them back together at the other end.
+Example: When you send an email, TCP ensures that all parts of the email reach the 
+recipient without any missing pieces.
+
+IP (Internet Protocol):
+
+IP is like the address system for your online activities. Just like every house has 
+an address, every device on the internet has an IP address. IP ensures that data knows exactly where to go.
+Example: When you visit a website, IP helps your computer find the correct server to retrieve the site from.
+
+FTP (File Transfer Protocol):
+
+FTP is like a delivery service for files. It allows you to upload or download files between your computer and a server.
+Example: If you want to upload your website files to a server so everyone can see it online, you use FTP.
+
+PPP (Point-to-Point Protocol):
+
+PPP is like a direct phone line between two computers. It allows two devices to communicate directly with each other over a network connection.
+Example: When you connect to the internet using a dial-up connection, PPP is the protocol that establishes that connection.
+
+
+SMTP (Simple Mail Transfer Protocol):
+
+SMTP is the protocol that handles sending emails. Think of it as the post office for your outgoing emails.
+Example: When you send an email, your email provider uses SMTP to send it to the recipient's mail server.
+
+POP3 (Post Office Protocol 3):
+
+POP3 is like the postman who delivers emails to your mailbox. It allows you to download emails from the server to your computer, 
+usually removing them from the server after they're downloaded.
+Example: If you open your email app and download all your messages to read them offline, you're using POP3.
+
+
+Telnet:
+
+Telnet is like a remote control for computers. It allows you to connect to another computer and control 
+it as if you were sitting in front of it.
+Example: If a technician needs to fix a computer problem but isn't in the same location, they might 
+use Telnet to access the computer remotely and solve the issue.
+
+
+
+
+
+
+
+GSM (Global System for Mobile Communications):
+
+GSM is like a global language that mobile phones use to communicate with cell towers. 
+It's the most common system for mobile phones worldwide, allowing you to make calls, 
+send texts, and use basic mobile internet.
+Example: When you make a call or send a text message on your mobile phone, GSM is the 
+technology that makes it possible.
+
+CDMA (Code Division Multiple Access):
+
+CDMA is another method that mobile phones use to connect to cell towers. 
+It's different from GSM because it allows more people to use the network 
+at the same time by giving each call a unique code.
+Example: If you and your friends are all talking on your phones at the same 
+time in the same area, CDMA ensures that all of your calls go through without interfering with each other.
+
+GPRS (General Packet Radio Service):
+
+GPRS is like a highway for data on your mobile phone. It allows you to use mobile internet, 
+send multimedia messages (MMS), and access various online services. It's slower than modern 
+4G or 5G networks but was one of the first ways to access the internet on a mobile phone.
+Example: When you browse the internet or check your emails on an older mobile phone, GPRS is 
+the technology that makes it possible.
+
+WLL (Wireless Local Loop):
+
+WLL is a system that connects homes or businesses to the phone network without using 
+traditional phone lines. Instead, it uses radio signals, similar to how mobile phones 
+work, to connect to a nearby base station.
+Example: In remote areas where laying phone lines is difficult, WLL can provide telephone 
+services by connecting homes to the network wirelessly.
+
+VoIP (Voice over Internet Protocol) is a technology that allows people to make phone calls over 
+the internet instead of using traditional phone lines. Think of it as making a phone call using 
+the same internet connection that you use to browse websites or stream videos.
+
+Here's a simple explanation:
+
+VoIP (Voice over Internet Protocol):
+
+VoIP is like turning your voice into digital data that can travel over the internet. 
+Instead of using a regular phone line, VoIP sends your voice as data packets through 
+the internet to the person you're calling. Once it reaches them, it turns back into 
+sound so they can hear you.
+Example: Apps like Skype, WhatsApp, or Zoom use VoIP technology. When you call someone 
+using these apps, you're not using traditional phone lines—you're using the internet to talk to them.
+VoIP is popular because it's often cheaper than traditional phone calls, especially for 
+long-distance or international calls. It also allows you to make calls from any device 
+that can connect to the internet, like a smartphone, tablet, or computer.
+
+
+
+
+
+
+
+
+WWW (World Wide Web):
+
+The WWW is like a massive library of information on the internet. 
+It’s made up of all the websites you can visit using your web browser. 
+When you search for something online, you’re exploring the World Wide Web.
+Example: When you type "www.google.com" into your web browser, you're 
+accessing a part of the World Wide Web.
+
+HTML (HyperText Markup Language):
+
+HTML is the basic language used to create web pages. It’s like the 
+blueprint for a webpage, telling your web browser how to display text, images, links, and other content.
+Example: If you see a webpage with a title, paragraphs, and images, 
+HTML is the language used to structure that content.
+
+XML (Extensible Markup Language):
+
+XML is a language used to store and organize data. Unlike HTML, 
+which is used to display content, XML is used to carry and share 
+data between different systems in a format that both humans and machines can read.
+Example: If a website needs to send information about products from one server to 
+another, it might use XML to format that data.
+
+Domain Names:
+
+A domain name is like the address of a house, but for a website. 
+It’s the name you type into your web browser to visit a specific site.
+Example: "google.com" is a domain name. It directs you to Google’s website.
+
+URL (Uniform Resource Locator):
+
+A URL is like the full address for a specific page on the internet. It includes 
+the domain name and additional information to guide you to a particular page.
+Example: "https://www.google.com/search?q=puppies" is a URL. It tells the 
+browser to go to Google and search for "puppies."
+
+Website:
+
+A website is a collection of related web pages that you can visit using a domain name. 
+Think of it as a book with many pages, where each page is a different part of the site.
+Example: "Facebook.com" is a website that includes different pages for profiles, posts, messages, and more.
+
+Web Browser:
+
+A web browser is a tool that lets you explore the World Wide Web. It’s like a window 
+through which you can view websites.
+Example: Google Chrome, Mozilla Firefox, and Safari are all web browsers that you can 
+use to visit websites.
+
+Web Servers:
+
+A web server is like a library that stores all the web pages of a website. 
+When you type a website’s URL into your browser, the web server sends the 
+correct pages to your browser so you can view them.
+Example: When you visit "amazon.com," a web server sends the Amazon homepage to your browser.
+
+Web Hosting:
+
+Web hosting is a service that provides space on a server for your website. 
+It’s like renting a spot in a library (the web server) to store your book (your website) 
+so that others can read it.
+Example: If you create a website, you need web hosting to put your site online so people can visit it.

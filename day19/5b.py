@@ -6,8 +6,8 @@ def count_total_words_alpha(filename):
             for word in words:
                 if word.isalpha():
                     total_words += 1
-    print("Total number of alphabetic words in '{}': {}".format(filename, total_words))
+    print("Total number of alphabetic words in '" + filename + "': " + str(total_words))
 
-# Example usage:
-filename = 'data.txt'  # Replace with your file path
+
+filename = 'data.txt'  
 count_total_words_alpha(filename)
