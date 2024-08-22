@@ -1,0 +1,137 @@
+1. Introduction to Database Concepts
+Example Scenario:
+A school maintains student attendance records manually. Each day, 
+the teacher marks students as present ('P') or absent ('A') in a register. 
+With 50 students and 26 working days in a month, this results in 1,300 manual 
+entries each month, leading to potential errors and inefficiencies.
+
+2. File System
+A file system is used to store data in files on a computer. For example, 
+the school might use one file to store student details (names, roll numbers) 
+and another file for attendance records.
+
+Limitations:
+
+Data Redundancy: The same student name might be stored in both files, leading to duplication.
+Data Inconsistency: If the student’s name is updated in one file but not in the other, the data 
+becomes inconsistent.
+Data Isolation: It’s difficult to link related data across multiple files (e.g., linking student 
+details with attendance records).
+3. Database Management System (DBMS)
+A DBMS overcomes these limitations by storing data in a structured, organized way. 
+It allows users to efficiently manage, update, and retrieve data.
+
+Example:
+
+School Database: Instead of separate files, the school uses a DBMS with a database 
+that includes tables like STUDENT, ATTENDANCE, and GUARDIAN.
+STUDENT table stores student details (e.g., RollNumber, SName, SDateofBirth, GUID).
+ATTENDANCE table records daily attendance (e.g., AttendanceDate, RollNumber, AttendanceStatus).
+GUARDIAN table stores guardian information (e.g., GUID, GName, GPhone, GAddress).
+4. Relational Data Model
+In a relational database, data is stored in tables (relations) that are linked by common attributes.
+
+Example:
+
+Tables and Relationships:
+STUDENT table: Each row represents a student, with columns for RollNumber, SName, SDateofBirth, 
+and GUID (Guardian ID).
+GUARDIAN table: Stores guardian details, with GUID as the primary key.
+ATTENDANCE table: Records attendance, linking to the STUDENT table through RollNumber.
+5. Key Concepts in DBMS
+Database Schema: The structure of the database, including tables and relationships.
+Example: The schema defines how STUDENT, ATTENDANCE, and GUARDIAN tables are related.
+Primary Key: A unique identifier for records in a table.
+Example: GUID in the GUARDIAN table or RollNumber in the STUDENT table.
+Foreign Key: An attribute in one table that links to the primary key in another table.
+Example: GUID in the STUDENT table is a foreign key linking to the GUID in the GUARDIAN table.
+Composite Key: A primary key composed of two or more attributes.
+Example: In the ATTENDANCE table, the composite key might be AttendanceDate and RollNumber.
+6. Data Manipulation
+Insertion: Adding a new record to the database.
+Example: Adding a new student to the STUDENT table.
+Deletion: Removing a record from the database.
+Example: Deleting a student’s record if they leave the school.
+Update: Modifying an existing record.
+Example: Updating a guardian’s phone number in the GUARDIAN table.
+7. Relational Data Model in Practice
+Example:
+The STUDENT table has attributes: RollNumber, SName, SDateofBirth, and GUID.
+The GUARDIAN table has attributes: GUID, GName, GPhone, GAddress.
+The ATTENDANCE table records daily attendance with attributes: AttendanceDate, RollNumber, AttendanceStatus.
+These tables are related through keys, allowing the school to efficiently manage and retrieve data, 
+such as finding a student’s attendance record or their guardian’s contact information.
+
+
+Using a DBMS with a relational data model helps eliminate the problems of file systems by reducing 
+redundancy, ensuring data consistency, and allowing for efficient data management. The database schema 
+defines the structure, keys enforce relationships, and operations like insertion, deletion, and update 
+allow for easy data manipulation.
+
+
+
+
+
+1. Create the GUARDIAN Table
+
+CREATE TABLE GUARDIAN (
+    GUID INT PRIMARY KEY,
+    GName VARCHAR(50),
+    GPhone VARCHAR(15),
+    GAddress VARCHAR(100)
+);
+Explanation: This table stores guardian details, with GUID as the primary key.
+2. Create the STUDENT Table
+
+CREATE TABLE STUDENT (
+    RollNumber INT PRIMARY KEY,
+    SName VARCHAR(50),
+    SDateofBirth DATE,
+    GUID INT,
+    FOREIGN KEY (GUID) REFERENCES GUARDIAN(GUID)
+);
+Explanation: This table stores student details. RollNumber is the primary key, and GUID is a foreign key linking to the GUID in the GUARDIAN table.
+3. Create the ATTENDANCE Table
+
+CREATE TABLE ATTENDANCE (
+    AttendanceDate DATE,
+    RollNumber INT,
+    AttendanceStatus CHAR(1),
+    PRIMARY KEY (AttendanceDate, RollNumber),
+    FOREIGN KEY (RollNumber) REFERENCES STUDENT(RollNumber)
+);
+Explanation: This table records daily attendance. The primary key is a composite key composed of AttendanceDate and RollNumber. RollNumber is a foreign key linking to the RollNumber in the STUDENT table.
+4. Insert Data into the GUARDIAN Table
+
+INSERT INTO GUARDIAN (GUID, GName, GPhone, GAddress)
+VALUES (1, 'Amit Ahuja', '5711492685', 'G-35, Ashok Vihar, Delhi');
+Explanation: This query adds a new guardian to the GUARDIAN table.
+5. Insert Data into the STUDENT Table
+
+INSERT INTO STUDENT (RollNumber, SName, SDateofBirth, GUID)
+VALUES (101, 'Atharv Ahuja', '2003-05-15', 1);
+Explanation: This query adds a new student to the STUDENT table, linked to a guardian by GUID.
+6. Insert Data into the ATTENDANCE Table
+
+INSERT INTO ATTENDANCE (AttendanceDate, RollNumber, AttendanceStatus)
+VALUES ('2024-08-21', 101, 'P');
+Explanation: This query records the attendance of a student for a specific date.
+7. Delete a Record from the STUDENT Table
+
+DELETE FROM STUDENT WHERE RollNumber = 101;
+Explanation: This query removes a student from the STUDENT table based on their RollNumber.
+8. Update a Record in the GUARDIAN Table
+
+UPDATE GUARDIAN
+SET GPhone = '9998887776'
+WHERE GUID = 1;
+Explanation: This query updates the phone number of a guardian in the GUARDIAN table.
+9. Select Data to Verify Relationships
+
+SELECT s.SName, g.GName, a.AttendanceDate, a.AttendanceStatus
+FROM STUDENT s
+JOIN GUARDIAN g ON s.GUID = g.GUID
+JOIN ATTENDANCE a ON s.RollNumber = a.RollNumber
+WHERE a.AttendanceDate = '2024-08-21';
+Explanation: This query retrieves data across the STUDENT, GUARDIAN, and ATTENDANCE tables, 
+showing how they are related

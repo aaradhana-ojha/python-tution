@@ -1,0 +1,44 @@
+1. create table
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT
+);
+
+2. Add (Insert) a Record
+
+INSERT INTO Students (StudentID, FirstName, LastName, Age)
+VALUES (1, 'John', 'Doe', 20);
+
+
+3. Display the Records
+
+SELECT * FROM Students;
+
+4. Delete a Record
+
+DELETE FROM Students
+WHERE StudentID = 1;
+
+
+5. Display the Records Again
+
+SELECT * FROM Students;
+
+
+6. Add (Insert) more Record
+INSERT INTO Students (StudentID, FirstName, LastName, Age)
+VALUES 
+    (1, 'John', 'Doe', 20),
+    (2, 'Jane', 'Smith', 22),
+    (3, 'Emily', 'Johnson', 21),
+    (4, 'Michael', 'Brown', 23);
+
+
+7.
+
+UPDATE Students
+SET Age = 23
+WHERE StudentID = 2;

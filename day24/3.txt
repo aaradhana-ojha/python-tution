@@ -1,0 +1,103 @@
+1. Add Primary Key
+Query:
+ALTER TABLE GUARDIAN ADD PRIMARY KEY (GUID);
+Explanation:
+
+Primary Key: A primary key is a unique identifier for each record in a table. 
+No two rows can have the same primary key, and it cannot be NULL.
+Purpose: This query adds a primary key to the GUID column in the GUARDIAN table, 
+ensuring that each GUID value is unique and non-null.
+
+Query:
+ALTER TABLE ATTENDANCE ADD PRIMARY KEY (AttendanceDate, RollNumber);
+Explanation:
+
+Composite Key: When two or more columns together uniquely identify a row, 
+it’s called a composite key.
+Purpose: This query adds a composite primary key to the ATTENDANCE table 
+using AttendanceDate and RollNumber. Together, these two columns must be unique for each row.
+
+2. Add Foreign Key
+Query:
+ALTER TABLE STUDENT 
+ADD FOREIGN KEY (GUID) REFERENCES GUARDIAN (GUID);
+Explanation:
+
+Foreign Key: A foreign key is a column (or set of columns) in one table that 
+uniquely identifies rows in another table. It creates a relationship between the two tables.
+Purpose: This query adds a foreign key to the GUID column in the STUDENT table. 
+This foreign key references the GUID column in the GUARDIAN table, meaning that 
+the GUID values in STUDENT must exist in the GUARDIAN table.
+
+3. Add UNIQUE Constraint
+Query:
+ALTER TABLE GUARDIAN 
+ADD UNIQUE (GPhone);
+Explanation:
+
+UNIQUE Constraint: Ensures that all values in a column are unique. 
+No duplicate values are allowed.
+Purpose: This query adds a UNIQUE constraint to the GPhone column 
+in the GUARDIAN table, ensuring that no two records in the table can have the same phone number.
+
+4. Add an Attribute
+Query:
+ALTER TABLE GUARDIAN 
+ADD income INT;
+Explanation:
+
+Add Attribute: This command adds a new column to an existing table.
+Purpose: The query adds a new column income of type INT (integer) 
+to the GUARDIAN table, allowing the table to store information about the income of guardians.
+
+5. Modify Datatype
+Query:
+ALTER TABLE GUARDIAN 
+MODIFY GAddress VARCHAR(40);
+Explanation:
+
+Modify Datatype: Changes the data type or size of an existing column in a table.
+Purpose: This query modifies the GAddress column in the GUARDIAN table, 
+increasing its size from VARCHAR(30) to VARCHAR(40). This allows storing longer addresses.
+
+6. Modify Constraint
+Query:
+ALTER TABLE STUDENT 
+MODIFY SName VARCHAR(20) NOT NULL;
+Explanation:
+
+NOT NULL Constraint: Prevents a column from having NULL values.
+Purpose: This query changes the SName column in the STUDENT table to 
+NOT NULL, meaning every record in the STUDENT table must have a value for SName.
+
+7. Add Default Value
+Query:
+ALTER TABLE STUDENT 
+MODIFY SDateofBirth DATE DEFAULT '2000-05-15';
+Explanation:
+
+Default Value: Specifies a default value for a column if no value is provided during record insertion.
+Purpose: This query sets a default value of '2000-05-15' for the SDateofBirth column in the STUDENT 
+table. If no date of birth is provided when adding a student, this date will be automatically used.
+
+8. Remove an Attribute
+Query:
+ALTER TABLE GUARDIAN 
+DROP income;
+Explanation:
+
+Drop Attribute: Removes an existing column from a table.
+Purpose: This query removes the income column from the GUARDIAN table, 
+deleting all data stored in this column.
+
+9. Remove Primary Key
+Query:
+ALTER TABLE GUARDIAN 
+DROP PRIMARY KEY;
+Explanation:
+
+Drop Primary Key: Removes the primary key constraint from a table.
+Purpose: This query removes the primary key from the GUARDIAN table. 
+After executing this, the GUID column will no longer be required to be 
+unique or non-null. However, removing a primary key may affect the 
+integrity of your database if not managed carefully.

@@ -1,0 +1,72 @@
+Database Concepts: Introduction and Need
+What is a Database?
+
+A database is like a digital filing cabinet where information is stored in an organized way. 
+It allows you to store, retrieve, and manage data efficiently. For example, a library database 
+might store information about books, authors, and borrowers.
+
+
+Why Do We Need Databases?
+
+Imagine trying to keep track of all your friends' contact details in a notebook. 
+It might get messy and hard to find information quickly. A database helps to organize 
+this information neatly, making it easy to search, update, and manage large amounts 
+of data accurately and quickly.
+
+Relational Data Model
+What is a Relational Data Model?
+A relational data model organizes data into tables (also called relations). 
+Each table is a collection of related data entries, similar to how you might 
+organize data into rows and columns in a spreadsheet.
+
+
+Key Terms in Relational Data Model
+Relation (Table):
+
+A relation is simply a table in a database. Each table stores data about a 
+particular type of object or activity. For example, a "Students" table might 
+store data about students in a school.
+Attribute (Column):
+
+An attribute is a column in a table, representing a specific type of information. 
+For example, in a "Students" table, attributes could be "Name," "Age," and "Grade."
+Tuple (Row):
+
+A tuple is a row in a table, representing a single record or entry. For example, 
+one row in the "Students" table would contain all the information (attributes) for one student.
+Domain:
+
+A domain refers to the set of possible values that an attribute can have. For example, 
+the domain of the "Age" attribute might be any positive integer between 5 and 18.
+Degree:
+
+The degree of a relation is the number of attributes (columns) in the table. For example, 
+if the "Students" table has columns for "Name," "Age," "Grade," and "ID," its degree is 4.
+Cardinality:
+
+The cardinality of a relation is the number of tuples (rows) in the table. For example, 
+if there are 100 students listed in the "Students" table, the cardinality is 100.
+Keys in a Relational Data Model
+Keys are special attributes in a table that help identify records uniquely and establish 
+relationships between tables.
+
+Candidate Key:
+
+A candidate key is an attribute, or a set of attributes, that can uniquely identify a 
+row in a table. There can be multiple candidate keys in a table. For example, in a "Students" 
+table, both "ID" and "Email" could be candidate keys.
+Primary Key:
+
+The primary key is a special candidate key chosen to uniquely identify each record in a table. 
+There can only be one primary key in a table. For example, the "ID" attribute in the "Students" 
+table could be the primary key.
+Alternate Key:
+
+An alternate key is any candidate key that is not chosen as the primary key. For example, if 
+"ID" is the primary key, "Email" would be an alternate key.
+Foreign Key:
+
+A foreign key is an attribute in one table that links to the primary key of another table, 
+creating a relationship between the two tables. For example, in a "Grades" table, a "StudentID" 
+might be a foreign key that links to the "ID" in the "Students" table, showing which grades 
+belong to which students.
