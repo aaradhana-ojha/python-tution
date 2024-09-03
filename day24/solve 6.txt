@@ -1,0 +1,16 @@
+1. CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Instructor VARCHAR(50),
+    Credits INT
+);
+
+
+INSERT INTO Courses (CourseID, CourseName, Instructor, Credits) 
+VALUES 
+    (101, 'Mathematics', 'Dr. Alice Brown', 4),
+    (102, 'History', 'Dr. Bob Smith', 3),
+    (103, 'Biology', 'Dr. Clara Johnson', 4),
+    (104, 'Chemistry', 'Dr. David Wilson', 4);
+
+

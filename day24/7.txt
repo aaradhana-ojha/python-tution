@@ -1,0 +1,144 @@
+1. Introduction to Relational Databases
+Definition and Purpose: Relational databases store data in a structured format, 
+using rows and columns. Each table (or relation) in a database represents a different 
+entity, such as a customer or an order, with rows representing records and columns 
+representing attributes or fields of the entity.
+
+Key Concepts:
+
+Tables (Relations): The fundamental structures that store data in a relational database. 
+Each table has a unique name and consists of columns and rows. Columns represent the 
+attributes of the data (like 'Name', 'Age', etc.), and each row represents a record or entry.
+Primary Key: A unique identifier for each record in a table. For example, a 'CustomerID' field 
+in a 'Customers' table could be the primary key, ensuring that every customer has a unique ID.
+Foreign Key: A field in one table that uniquely identifies a row in another table, establishing 
+a relationship between the two tables. For example, an 'Order' table might have a 'CustomerID' 
+that refers to the 'CustomerID' in the 'Customers' table, linking orders to customers.
+
+2. Basics of SQL
+SQL (Structured Query Language): SQL is the standard language for managing and manipulating 
+relational databases. It includes commands for creating, updating, deleting, and querying data.
+
+Core SQL Operations:
+
+CREATE TABLE: Defines a new table in the database, specifying its columns and data types.
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100)
+);
+INSERT INTO: Adds new records to a table.
+
+INSERT INTO Customers (CustomerID, Name, Email) VALUES (1, 'Alice', 'alice@example.com');
+SELECT: Retrieves data from one or more tables.
+
+SELECT * FROM Customers;
+UPDATE: Modifies existing records in a table.
+
+UPDATE Customers SET Email = 'alice_new@example.com' WHERE CustomerID = 1;
+DELETE: Removes records from a table.
+
+DELETE FROM Customers WHERE CustomerID = 1;
+ALTER TABLE: Modifies the structure of an existing table (e.g., adding or deleting columns).
+
+ALTER TABLE Customers ADD COLUMN Phone VARCHAR(15);
+3. Advanced SQL Operations
+JOIN Operations: JOIN operations combine rows from two or more tables based on a related column. 
+The different types of joins allow for flexibility in how the data is combined.
+
+INNER JOIN: Returns only rows with matching values in both tables.
+
+SELECT Customers.Name, Orders.OrderID
+FROM Customers
+INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID;
+LEFT (OUTER) JOIN: Returns all rows from the left table and matched rows from the right table; fills NULLs for unmatched rows.
+RIGHT (OUTER) JOIN: Returns all rows from the right table and matched rows from the left table; fills NULLs for unmatched rows.
+FULL (OUTER) JOIN: Returns all rows when there is a match in either table.
+GROUP BY and HAVING:
+
+GROUP BY is used to group rows that have the same values in specified columns into summary rows, like "total sales per customer."
+HAVING is used to filter groups based on a condition.
+
+SELECT CustomerID, COUNT(OrderID)
+FROM Orders
+GROUP BY CustomerID
+HAVING COUNT(OrderID) > 5;
+ORDER BY:
+
+Sorts the result set based on specified columns.
+
+SELECT * FROM Customers ORDER BY Name ASC;
+4. Data Integrity and Constraints
+Constraints are rules enforced on data columns to maintain data integrity and ensure the database remains accurate and reliable.
+
+NOT NULL: Ensures that a column cannot have a NULL (empty) value.
+UNIQUE: Ensures that all values in a column are unique across the table.
+CHECK: Ensures that all values in a column meet a specified condition.
+DEFAULT: Sets a default value for a column when no value is specified.
+FOREIGN KEY: Ensures referential integrity between two tables.
+PRIMARY KEY: Uniquely identifies each row in a table, often combining NOT NULL and UNIQUE constraints.
+5. Transactions and Concurrency Control
+Transactions: A transaction is a sequence of SQL operations treated as a single unit of work. Transactions ensure the ACID properties:
+
+Atomicity: Ensures that all operations within a transaction are completed; if one fails, the entire transaction fails.
+Consistency: Ensures that a transaction takes the database from one valid state to another.
+Isolation: Ensures that transactions do not interfere with each other.
+Durability: Ensures that once a transaction is committed, it will remain so, even in the event of a power loss or crash.
+Concurrency Control: Techniques to manage the simultaneous execution of transactions in a multi-user environment, ensuring that data is consistent.
+
+BEGIN TRANSACTION: Starts a new transaction.
+COMMIT: Saves all changes made during the transaction.
+ROLLBACK: Reverts changes made during a transaction to the last committed state.
+6. Database Normalization
+Definition: Normalization is the process of organizing a database to reduce redundancy and improve data integrity. The goal is to ensure that each piece of data is stored only once.
+
+Normal Forms:
+
+1NF (First Normal Form): Eliminates repeating groups by ensuring that each column contains only atomic (indivisible) values.
+2NF (Second Normal Form): Removes partial dependencies (non-key attributes should depend on the whole primary key).
+3NF (Third Normal Form): Removes transitive dependencies (non-key attributes should not depend on other non-key attributes).
+BCNF (Boyce-Codd Normal Form): A stricter version of 3NF where every determinant is a candidate key.
+7. SQL Functions and Subqueries
+Aggregate Functions: Functions that perform calculations on a set of values and return a single value:
+
+COUNT: Counts the number of rows.
+SUM: Returns the total sum of a numeric column.
+AVG: Returns the average value.
+MIN: Returns the smallest value.
+MAX: Returns the largest value.
+Scalar Functions: Operate on a single value and return a single value.
+
+UPPER: Converts a string to uppercase.
+LOWER: Converts a string to lowercase.
+ROUND: Rounds a number to a specified number of decimal places.
+Subqueries: Nested queries used within another SQL query to provide intermediate results.
+
+
+SELECT * FROM Customers WHERE CustomerID IN (SELECT CustomerID FROM Orders WHERE OrderDate > '2024-01-01');
+8. Indexing
+Definition: An index is a database object created to speed up the retrieval of rows by using pointers. Indexes are created on columns to improve search performance.
+
+Types of Indexes:
+
+Clustered Index: Physically sorts the data rows in the table based on their key values. A table can have only one clustered index.
+Non-Clustered Index: Contains a sorted list of references (pointers) to the data in the table. A table can have multiple non-clustered indexes.
+9. Stored Procedures and Triggers
+Stored Procedures: A set of SQL statements that are stored in the database and can be executed as a single unit. They are used to encapsulate complex operations or business logic that can be reused.
+
+Triggers: Special types of stored procedures that are automatically executed in response to certain events on a particular table or view, such as inserting, updating, or deleting records.
+
+10. Best Practices in SQL Development
+Consistent Naming Conventions: Use clear, consistent names for tables, columns, and other database objects.
+Avoid Redundant Data: Normalize tables to eliminate redundancy and maintain data integrity.
+Index Appropriately: Create indexes on columns that are frequently used in search conditions or joins.
+Use Transactions Wisely: Use transactions to ensure that a series of related operations are completed successfully as a single unit.
+Optimize Queries: Write efficient SQL queries to minimize resource usage and improve performance.
+11. Practical Examples and Exercises
+Practical exercises provide hands-on experience in SQL operations:
+
+Creating Tables: Practice using CREATE TABLE to define the structure of your database.
+Inserting Data: Learn to use INSERT INTO to add records.
+Performing Queries: Use SELECT, JOIN, WHERE, and other commands to retrieve and manipulate data.
+Using Joins: Practice different types of joins to understand how to combine data from multiple tables.
+Applying Constraints: Practice defining constraints like PRIMARY KEY, FOREIGN KEY, NOT NULL, and CHECK to enforce data integrity.

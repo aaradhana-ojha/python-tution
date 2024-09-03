@@ -1,0 +1,149 @@
+Create Table:
+sql
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT
+);
+Define Foreign Key (Example):
+
+CREATE TABLE Enrollments (
+    EnrollmentID INT PRIMARY KEY,
+    StudentID INT,
+    CourseID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+Basics of SQL:
+
+Create Table:
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100)
+);
+Insert Records:
+
+INSERT INTO Students (StudentID, FirstName, LastName, Age)
+VALUES (1, 'John', 'Doe', 20);
+Select Records:
+
+SELECT * FROM Students;
+Update Record:
+
+UPDATE Students
+SET Age = 21
+WHERE StudentID = 1;
+Delete Record:
+
+DELETE FROM Students
+WHERE StudentID = 1;
+Alter Table:
+
+ALTER TABLE Students
+ADD COLUMN Gender VARCHAR(10);
+Advanced SQL Operations:
+
+INNER JOIN:
+
+SELECT Students.FirstName, Courses.CourseName
+FROM Students
+INNER JOIN Enrollments ON Students.StudentID = Enrollments.StudentID
+INNER JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+LEFT JOIN:
+
+SELECT Students.FirstName, Courses.CourseName
+FROM Students
+LEFT JOIN Enrollments ON Students.StudentID = Enrollments.StudentID
+LEFT JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+GROUP BY and HAVING:
+
+SELECT Age, COUNT(*)
+FROM Students
+GROUP BY Age
+HAVING COUNT(*) > 1;
+ORDER BY:
+
+SELECT * FROM Students
+ORDER BY LastName ASC;
+Data Integrity and Constraints:
+
+Create Table with Constraints:
+
+CREATE TABLE Instructors (
+    InstructorID INT PRIMARY KEY,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) UNIQUE,
+    Email VARCHAR(100) CHECK (Email LIKE '%@%.%'),
+    HireDate DATE DEFAULT CURRENT_DATE
+);
+Transactions and Concurrency Control:
+
+Transaction Commands:
+
+BEGIN TRANSACTION;
+UPDATE Students SET Age = 22 WHERE StudentID = 2;
+INSERT INTO Students (StudentID, FirstName, LastName, Age)
+VALUES (3, 'Alice', 'Smith', 19);
+COMMIT;
+Database Normalization:
+
+Example of Normalization:
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50)
+);
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
+SQL Functions and Subqueries:
+
+Aggregate Functions:
+
+SELECT AVG(Age) AS AverageAge FROM Students;
+Subquery:
+
+SELECT FirstName, LastName
+FROM Students
+WHERE Age = (SELECT MAX(Age) FROM Students);
+Indexing:
+
+Create Index:
+
+CREATE INDEX idx_students_lastname
+ON Students(LastName);
+Stored Procedures and Triggers:
+
+Stored Procedure:
+
+CREATE PROCEDURE AddStudent(IN sID INT, IN fName VARCHAR(50), IN lName VARCHAR(50), IN sAge INT)
+BEGIN
+    INSERT INTO Students (StudentID, FirstName, LastName, Age)
+    VALUES (sID, fName, lName, sAge);
+END;
+Trigger:
+
+CREATE TRIGGER BeforeStudentInsert
+BEFORE INSERT ON Students
+FOR EACH ROW
+SET NEW.Age = IF(NEW.Age IS NULL, 18, NEW.Age);
+Best Practices in SQL Development:
+
+Example of Optimized Query:
+
+SELECT FirstName, LastName FROM Students
+WHERE Age > 20
+ORDER BY LastName;
+Practical Examples and Exercises:
+
+Example Exercise Query:
+
+SELECT * FROM Students
+WHERE Age BETWEEN 18 AND 22;
